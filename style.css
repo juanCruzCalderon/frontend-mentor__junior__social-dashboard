@@ -6,6 +6,7 @@
     --clr-twitter:hsl(203, 89%, 53%);
 
     --btn-light:hsl(230, 22%, 74%);
+    --btn-dark:linear-gradient(90deg,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 
     /*dark mode*/
     --dark-clr-bkg:hsl(230, 17%, 14%);
@@ -17,12 +18,8 @@
     --light-clr-card-bkg:hsl(227, 47%, 96%);
     --light-gray-clr-text: hsl(228, 12%, 44%);
     --light-clr-text:  hsl(230, 17%, 14%);
-    /*
---clr-instagram:;
-- Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
-#### Dark Theme
-- Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
-    */
+    
+
 }
 
 *{
@@ -100,8 +97,33 @@ img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 1.5vw;
+}
+.mode-circle{
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: .3s transform  ease-in;
+    transform: translateX(0);
+}
+#dark-mode{
+    background-color: var(--btn-light);
+    border:none;
+    width: 50px;
+    padding: 3px;
+    border-radius:30px;
 }
 
+.dark .mode-circle{
+    background-color: var(--dark-clr-bkg);
+    
+    transform: translateX(120%);
+}
+.dark #dark-mode{
+    background: var(--btn-dark);
+}
 
 
 
@@ -158,6 +180,10 @@ img {
 .instagram{
     background: linear-gradient(90deg,hsl(37, 97%, 70%) , hsl(329, 70%, 58%));
 }
+
+
+
+
 
 
 
