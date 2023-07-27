@@ -41,7 +41,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10vh auto;
+    margin: 10vh auto 14vh;
     gap: 10vw;
     width: 90%;
 }
@@ -72,7 +72,11 @@ img {
 .danger{
     color: var(--clr-danger)!important;
 }
-
+.overview{
+    font-size: calc(8px + 2vw);
+    text-align: left;
+    width: 100%;
+}
 
 
 
@@ -92,7 +96,12 @@ img {
     gap: 10px;
     width: 100%;
 }
-
+.header__main h1{
+    font-size: calc(10px + 3vw);
+}
+.header__main p{
+    font-size: calc(8px + 1vw);
+}
 .mode{
     display: flex;
     flex-direction: row;
@@ -105,13 +114,13 @@ img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    transition: .3s transform  ease-in;
+    transition: .2s transform  ease-in;
     transform: translateX(0);
 }
 #dark-mode{
     background-color: var(--btn-light);
     border:none;
-    width: 50px;
+    min-width: 50px;
     padding: 3px;
     border-radius:30px;
 }
@@ -151,6 +160,12 @@ img {
     overflow: hidden;
     border-radius: 8px;
     position: relative;
+}
+.card__body h2{
+    font-size: calc(20px + 3vw);
+}
+.card__body h4{
+    letter-spacing: 2px;
 }
 .dark .card{
     background-color: var(--dark-clr-card-bkg);
@@ -199,7 +214,13 @@ img {
     width: 100%;
     
 }
+.sub-cards h2{
+    font-size: calc(19px + .7vw);
 
+}
+.sub-cards h6{
+    font-size: calc(8px + .7vw);
+}
 .sub-cards__container{
     background-color: var(--light-clr-card-bkg);
     padding: 7%;
@@ -231,13 +252,7 @@ img {
 
 /*          media querys            */
 @media screen and (min-width: 500px){
-    hr{
-        display: none;
-    }
-    .header{
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    
 
 
     .main-cards,.sub-cards{
@@ -253,6 +268,13 @@ img {
 
 
 @media screen and (min-width:900px) {
+    hr{
+        display: none;
+    }
+    .header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .main-cards{
         display: flex;
         flex-direction: row;
