@@ -126,6 +126,9 @@ img {
     align-items: center;
     padding: 6vw;
     text-align: center;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
 }
 .dark .card{
     background-color: var(--dark-clr-card-bkg);
@@ -136,10 +139,25 @@ img {
     align-content: center;
     gap: 10px;
 }
+.card__line{
+    height: 6px;
+    position: absolute;
+    top: 0;left: 0;right: 0;
+    background-color: red;
+}
+.facebook{
+    background-color: var(--clr-facebook);
+}
 
-
-
-
+.youtube{
+    background-color: var(--clr-youtube);
+}
+.twitter{
+    background-color: var(--clr-twitter);
+}
+.instagram{
+    background: linear-gradient(90deg,hsl(37, 97%, 70%) , hsl(329, 70%, 58%));
+}
 
 
 
@@ -159,6 +177,7 @@ img {
 .sub-cards__container{
     background-color: var(--light-clr-card-bkg);
     padding: 7%;
+    border-radius: 8px;
 }
 .dark .sub-cards__container{
     background-color: var(--dark-clr-card-bkg);
